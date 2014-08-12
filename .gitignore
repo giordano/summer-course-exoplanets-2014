@@ -1,0 +1,12 @@
+auto/*
+*.aux
+*.bcf
+*.log
+*.nav
+*.out
+*.run.xml
+*.snm
+*.synctex.gz
+*.toc
+*.sty
+poster.pdf
