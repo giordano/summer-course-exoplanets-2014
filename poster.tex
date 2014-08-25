@@ -90,18 +90,6 @@
     \begin{columns}[T]
       \begin{column}{0.02\paperwidth}
       \end{column}
-      \begin{column}{.12\paperwidth}
-        \begin{center}
-          \includegraphics[width=\columnwidth]{figures/giordano.jpg}
-        \end{center}
-      \end{column}
-      \begin{column}{.7\paperwidth}
-        \vskip4ex
-        \raggedleft
-        \usebeamercolor{title in headline}{\color{fg}\textbf{\Huge{\inserttitle}}\\[1ex]}
-        \usebeamercolor{author in headline}{\color{fg}\Large{\insertauthor}\\[1ex]}
-        \usebeamercolor{institute in headline}{\color{fg}\large{\insertinstitute}\\[1ex]}
-      \end{column}
       \begin{column}{.16\paperwidth}
         \vskip4ex
         \begin{center}
@@ -110,6 +98,22 @@
           \includegraphics[width=.88\columnwidth]{figures/dipartimento.png}
         \end{center}
         \vskip2ex
+      \end{column}
+      \begin{column}{.7\paperwidth}
+        \vskip4ex
+        \begin{center}
+          \usebeamercolor{title in
+            headline}{\color{fg}\textbf{\Huge{\inserttitle}}\\[1ex]}
+          \usebeamercolor{author in
+            headline}{\color{fg}\Large{\insertauthor}\\[1ex]}
+          \usebeamercolor{institute in
+            headline}{\color{fg}\large{\insertinstitute}\\[1ex]}
+        \end{center}
+      \end{column}
+      \begin{column}{.12\paperwidth}
+        \begin{center}
+          \includegraphics[width=0.9\columnwidth]{figures/giordano.jpg}
+        \end{center}
       \end{column}
       \begin{column}{.02\paperwidth}
       \end{column}
@@ -127,9 +131,11 @@
     \rule{0pt}{3pt}
   \end{beamercolorbox}
 
-%  \leavevmode%
+  % \leavevmode%
   \begin{beamercolorbox}[ht=4ex,leftskip=1em,rightskip=1em]{author in head/foot}%
-    \textsc{Mosè Giordano} (University of Salento and INFN Lecce)
+    \textsc{Mosè Giordano}
+    (\href{mailto:Mose.Giordano@le.infn.it}{Mose.Giordano@le.infn.it}
+    \(\vcenter{\hbox{\includegraphics{figures/mail}}}\))
     \hfill
     La Palma, Canary Islands, \insertdate
     \vskip0.9ex
@@ -171,12 +177,12 @@
 
 \title{Estimating orbital period of exoplanets \\
   in microlensing events}
-\author{Achille A. Nucita, \emph{Mosè Giordano}, Francesco De Paolis, Gabriele
+\author{Mosè Giordano, Achille A. Nucita, Francesco De Paolis, Gabriele
   Ingrosso}
 \institute[University of Salento and INFN Lecce]{Department of Mathematics and
   Physics ``\emph{E. De Giorgi}'', University of Salento, Lecce, Italy \\
   INFN, Section of Lecce, Italy}
-\date{24--25 September 2014}
+\date{24 September--2 October 2014}
 
 \begin{document}
 \begin{frame}
@@ -238,7 +244,7 @@
               window}
           \item[\pro] We fit the observed amplification curve to a \alert{simple
               Paczyński curve}, with four easily-guessable free parameters, and
-            then perform a periodogram on the reside curve: the deduced period
+            then perform a periodogram on the residue curve: the deduced period
             is the \alert{period of the binary system}
           \item[\pro] We need to \alert{remove a very small region} around the
             maximum amplification peak from the residue curve to perform the
@@ -287,7 +293,9 @@
             G. Ingrosso. ``\emph{Signatures of rotating binaries in microlensing
               experiments}''. In: \emph{Monthly Notices of the Royal
               Astronomical Society} 438 (Mar. 2014), pp. 2466–2473.
-            \doi{10.1093/mnras/stt2363}. \arxiv{1401.6288}.
+            \doi{10.1093/mnras/stt2363} (scan here:
+            \(\vcenter{\hbox{\includegraphics{figures/paper}}}\)).
+            \arxiv{1401.6288}.
           \end{itemize}
         \end{block}
       \end{minipage}
