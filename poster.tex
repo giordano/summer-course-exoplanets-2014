@@ -90,14 +90,12 @@
     \begin{columns}[T]
       \begin{column}{0.02\paperwidth}
       \end{column}
-      \begin{column}{.16\paperwidth}
-        \vskip4ex
+      \begin{column}{.12\paperwidth}
         \begin{center}
-          \includegraphics[width=.4\columnwidth]{figures/logo-unisalento.pdf} \qquad
-          \includegraphics[width=.4\columnwidth]{figures/infn.jpg} \\[3ex]
-          \includegraphics[width=.88\columnwidth]{figures/dipartimento.png}
+          \includegraphics[width=0.8\columnwidth]{figures/giordano.jpg} \\[1.2ex]
+          \href{mailto:Mose.Giordano@le.infn.it}{mose.giordano@le.infn.it}~
+          \(\vcenter{\hbox{\includegraphics[scale=1.17]{figures/mail}}}\)
         \end{center}
-        \vskip2ex
       \end{column}
       \begin{column}{.7\paperwidth}
         \vskip4ex
@@ -110,10 +108,14 @@
             headline}{\color{fg}\large{\insertinstitute}\\[1ex]}
         \end{center}
       \end{column}
-      \begin{column}{.12\paperwidth}
+      \begin{column}{.16\paperwidth}
+        \vskip4ex
         \begin{center}
-          \includegraphics[width=0.9\columnwidth]{figures/giordano.jpg}
+          \includegraphics[width=.42\columnwidth]{figures/logo-unisalento.pdf} \qquad
+          \includegraphics[width=.42\columnwidth]{figures/infn.jpg} \\[2.8ex]
+          \includegraphics[width=.94\columnwidth]{figures/dipartimento.png}
         \end{center}
+        \vskip2ex
       \end{column}
       \begin{column}{.02\paperwidth}
       \end{column}
@@ -133,9 +135,7 @@
 
   % \leavevmode%
   \begin{beamercolorbox}[ht=4ex,leftskip=1em,rightskip=1em]{author in head/foot}%
-    \textsc{Mosè Giordano}
-    (\href{mailto:Mose.Giordano@le.infn.it}{Mose.Giordano@le.infn.it}
-    \(\vcenter{\hbox{\includegraphics{figures/mail}}}\))
+    Summer Course on Exoplanets
     \hfill
     La Palma, Canary Islands, \insertdate
     \vskip0.9ex
@@ -172,13 +172,23 @@
 % Simboli che si possono utilizzare negli elenchi dell'ambiente itemize.  `\pro'
 % (nel senso di "vantaggio") produce un tick, `\con' (nel senso di "contro")
 % produce un cross.  Usa simboli del pacchetto `pifont'
-\newcommand{\pro}{\color{alerted text.fg}{\ding{51}}}
-\newcommand{\con}{\color{alerted text.fg}{\ding{55}}}
+\newcommand{\pro}{\color{green}\ding{51}}
+\newcommand{\con}{\color{red}\ding{55}}
+
+% Number of the block.  Definition adated from ball style for enumerate items in
+% beamerbaseauxtemplates.sty.
+\newcommand{\blocknumber}[1]{\begin{pgfpicture}{-1ex}{-0.65ex}{1ex}{1ex}
+    \usebeamercolor[fg]{item projected}
+    {\pgftransformscale{2.5}\pgftext{\normalsize\pgfuseshading{bigsphere}}}
+    {\pgftransformshift{\pgfpoint{0pt}{0.5pt}}
+      \pgftext{\usebeamercolor[fg]{block title}#1}}
+  \end{pgfpicture}}
 
 \title{Estimating orbital period of exoplanets \\
   in microlensing events}
-\author{Mosè Giordano, Achille A. Nucita, Francesco De Paolis, Gabriele
-  Ingrosso}
+\author{\texorpdfstring{\textsc{Mosè Giordano}, \textsc{Achille A. Nucita},
+    \textsc{Francesco De Paolis}, \textsc{Gabriele Ingrosso}}{Mosè Giordano,
+    Achille A. Nucita, Francesco De Paolis, Gabriele Ingrosso}}
 \institute[University of Salento and INFN Lecce]{Department of Mathematics and
   Physics ``\emph{E. De Giorgi}'', University of Salento, Lecce, Italy \\
   INFN, Section of Lecce, Italy}
@@ -190,7 +200,7 @@
     %%% Left column
     \begin{column}{0.48\columnwidth}
       \begin{minipage}[T]{\columnwidth}
-        \begin{block}{Gravitational lensing}
+        \begin{block}{Gravitational lensing\hfill \blocknumber{1}}
           A \alert{gravitational lens} is a distribution of matter whose
           gravitational pull distorts space-time, bends light rays and
           \alert{amplifies} the luminosity of a source star coming to an
@@ -203,7 +213,7 @@
           \end{figure}
         \end{block}
         
-        \begin{block}{Binary Lens with Orbital Motion}
+        \begin{block}{Binary Lens with Orbital Motion\hfill \blocknumber{3}}
           Usually, in microlensing events static binary systems are taken into
           account, but binary systems do rotate
 
@@ -228,7 +238,7 @@
           \alert{independently}?
         \end{block}
 
-        \begin{block}{Fit to Real Data}
+        \begin{block}{Fit to Real Data\hfill \blocknumber{5}}
           \begin{figure}
             \centering
             \includegraphics[width=0.7\textwidth]{figures/ogle322all}
@@ -237,17 +247,17 @@
           \end{figure}
         \end{block}
 
-        \begin{block}{Discussion}
+        \begin{block}{Conclusions\hfill \blocknumber{6}}
           \begin{itemize}
           \item[\pro] Orbital period of the lenses should be \alert{shorter}
             than the Einstein time or we must have \alert{long observational
               window}
           \item[\pro] We fit the observed amplification curve to a \alert{simple
               Paczyński curve}, with four easily-guessable free parameters, and
-            then perform a periodogram on the residue curve: the deduced period
-            is the \alert{period of the binary system}
+            then perform a periodogram on the residue curve: the period so
+            obtained is the \alert{period of the binary system}
           \item[\pro] We need to \alert{remove a very small region} around the
-            maximum amplification peak from the residue curve to perform the
+            maximum peak from the residue curve before performing the
             periodogram
           \item[\con] Periodic feature with the same period far from the peak
             \(\implies\) \alert{source periodicity} (binary system, intrinsic
@@ -260,7 +270,8 @@
     %%% Right column
     \begin{column}{0.48\textwidth}
       \begin{minipage}[T]{\columnwidth}
-        \begin{block}{Detecting Exoplanets with Microlensing}
+        \begin{block}{Detecting Exoplanets with Microlensing\hfill
+            \blocknumber{2}}
           \alert{Microlensing} is a powerful tool to detect exoplanets: a binary
           system (lensing star with a companion planet) induces non-negligible
           deviations to the usual symmetric \alert{Paczyński light curve}
@@ -274,7 +285,8 @@
           \end{figure}
         \end{block}
 
-        \begin{block}{Simulation: Amplification Curve and Periodogram}
+        \begin{block}{Simulation: Amplification Curve and Periodogram\hfill
+            \blocknumber{4}}
           \begin{figure}
             \centering
             \includegraphics[width=0.775\columnwidth]{figures/figure2}\\[1.8ex]
@@ -286,16 +298,16 @@
           \end{figure}
         \end{block}
 
-        \begin{block}{Reference}
+        \begin{block}{Reference\hfill \blocknumber{7}}
           \begin{itemize}
           \item[{\includegraphics[scale=2]{figures/beamericonarticle-crop.pdf}}]
             A. A. Nucita, M. Giordano, F. De Paolis, and
             G. Ingrosso. ``\emph{Signatures of rotating binaries in microlensing
-              experiments}''. In: \emph{Monthly Notices of the Royal
-              Astronomical Society} 438 (Mar. 2014), pp. 2466–2473.
+              experiments}''. \emph{MNRAS} 438 (Mar. 2014), pp. 2466–2473.
             \doi{10.1093/mnras/stt2363} (scan here:
-            \(\vcenter{\hbox{\includegraphics{figures/paper}}}\)).
-            \arxiv{1401.6288}.
+            \(\vcenter{\hbox{\includegraphics[scale=1.02]{figures/paper}}}\)).
+            \arxiv{1401.6288} (scan here:
+            \(\vcenter{\hbox{\includegraphics[scale=1.17]{figures/arxiv}}}\)).
           \end{itemize}
         \end{block}
       \end{minipage}
