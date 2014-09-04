@@ -5,7 +5,7 @@
 \usepackage[sfmath,slantedGreeks]{kpfonts}
 \usepackage[utf8]{inputenc}
 \usepackage[orientation=portrait,size=a0,scale=1.4]{beamerposter}
-\usepackage{graphicx,pifont,siunitx}
+\usepackage{graphicx,siunitx}
 
 % \usetheme{Madrid}
 \usecolortheme{beaver}
@@ -92,9 +92,9 @@
       \end{column}
       \begin{column}{.12\paperwidth}
         \begin{center}
-          \includegraphics[width=0.8\columnwidth]{figures/giordano.jpg} \\[1.2ex]
+          \includegraphics[width=0.82\columnwidth]{figures/giordano.jpg} \\[1.5ex]
           \href{mailto:Mose.Giordano@le.infn.it}{mose.giordano@le.infn.it}~
-          \(\vcenter{\hbox{\includegraphics[scale=1.17]{figures/mail}}}\)
+          \(\vcenter{\hbox{\includegraphics[scale=1.3]{figures/mail}}}\)
         \end{center}
       \end{column}
       \begin{column}{.7\paperwidth}
@@ -111,16 +111,16 @@
       \begin{column}{.16\paperwidth}
         \vskip4ex
         \begin{center}
-          \includegraphics[width=.42\columnwidth]{figures/logo-unisalento.pdf} \qquad
-          \includegraphics[width=.42\columnwidth]{figures/infn.jpg} \\[2.8ex]
-          \includegraphics[width=.94\columnwidth]{figures/dipartimento.png}
+          \includegraphics[width=.43\columnwidth]{figures/logo-unisalento.pdf} \qquad
+          \includegraphics[width=.43\columnwidth]{figures/infn.jpg} \\[2.8ex]
+          \includegraphics[width=.96\columnwidth]{figures/dipartimento.png}
         \end{center}
         \vskip2ex
       \end{column}
       \begin{column}{.02\paperwidth}
       \end{column}
     \end{columns}
-    \vskip2ex
+    \vskip1ex
   \end{beamercolorbox}
 
   \begin{beamercolorbox}[wd=\paperwidth]{lower separation line head}
@@ -169,11 +169,8 @@
 \newcommand*{\toder}[3][]{\frac{{\dd^{#1}}#2}{\dd {#3}^{#1}}}
 \newcommand*{\ltoder}[3][]{{\dd^{#1}}#2/\dd {#3}^{#1}}
 
-% Simboli che si possono utilizzare negli elenchi dell'ambiente itemize.  `\pro'
-% (nel senso di "vantaggio") produce un tick, `\con' (nel senso di "contro")
-% produce un cross.  Usa simboli del pacchetto `pifont'
-\newcommand{\pro}{\color{green}\ding{51}}
-\newcommand{\con}{\color{red}\ding{55}}
+\newcommand{\advice}{\includegraphics[height=0.8em]{figures/light-bulb}}
+\newcommand{\warning}{\includegraphics[height=0.6em]{figures/Warning-icon}}
 
 % Number of the block.  Definition adated from ball style for enumerate items in
 % beamerbaseauxtemplates.sty.
@@ -249,17 +246,17 @@
 
         \begin{block}{Conclusions\hfill \blocknumber{6}}
           \begin{itemize}
-          \item[\pro] Orbital period of the lenses should be \alert{shorter}
+          \item[\advice] Orbital period of the lenses should be \alert{shorter}
             than the Einstein time or we must have \alert{long observational
               window}
-          \item[\pro] We fit the observed amplification curve to a \alert{simple
+          \item[\advice] We fit the observed amplification curve to a \alert{simple
               Paczyński curve}, with four easily-guessable free parameters, and
             then perform a periodogram on the residue curve: the period so
             obtained is the \alert{period of the binary system}
-          \item[\pro] We need to \alert{remove a very small region} around the
+          \item[\warning] We need to \alert{remove a very small region} around the
             maximum peak from the residue curve before performing the
             periodogram
-          \item[\con] Periodic feature with the same period far from the peak
+          \item[\warning] Periodic feature with the same period far from the peak
             \(\implies\) \alert{source periodicity} (binary system, intrinsic
             variable, etc\dots)
           \end{itemize}
@@ -305,9 +302,9 @@
             G. Ingrosso. ``\emph{Signatures of rotating binaries in microlensing
               experiments}''. \emph{MNRAS} 438 (Mar. 2014), pp. 2466–2473.
             \doi{10.1093/mnras/stt2363} (scan here:
-            \(\vcenter{\hbox{\includegraphics[scale=1.02]{figures/paper}}}\)).
+            \(\vcenter{\hbox{\includegraphics[height=1em]{figures/paper}}}\)).
             \arxiv{1401.6288} (scan here:
-            \(\vcenter{\hbox{\includegraphics[scale=1.17]{figures/arxiv}}}\)).
+            \(\vcenter{\hbox{\includegraphics[height=1em]{figures/arxiv}}}\)).
           \end{itemize}
         \end{block}
       \end{minipage}
