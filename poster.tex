@@ -27,48 +27,51 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %% Colors
-\RequirePackage{tangocolors}
+
+% Some tango colors
+% butter (yellowish)
+\definecolor{tabutter}{rgb}{0.98824, 0.91373, 0.30980}		% #fce94f
 
 % orange
 \definecolor{taorange}{rgb}{0.98824, 0.68627, 0.24314}		% #fcaf3e
 \definecolor{ta2orange}{rgb}{0.96078, 0.47451, 0}		% #f57900
 \definecolor{ta3orange}{rgb}{0.80784, 0.36078, 0}		% #ce5c00
 
+% Custom colors
 % sky blue
-\definecolor{taskyblue}{rgb}{0.34706, 0.56078, 0.81176}		% #728fcf
-\definecolor{ta2skyblue}{rgb}{0.10392, 0.39608, 0.64314}	% #3465a4
-\definecolor{ta3skyblue}{rgb}{0.02549, 0.29020, 0.52941}	% #204a87
-
-\definecolor{LightSteelBlue}{rgb}{.5, .77, .87}
+\definecolor{mmskyblue}{rgb}{0.34706, 0.56078, 0.81176}		% #728fcf
+\definecolor{mm2skyblue}{rgb}{0.10392, 0.39608, 0.64314}	% #3465a4
+\definecolor{mm3skyblue}{rgb}{0.02549, 0.29020, 0.52941}	% #204a87
+\definecolor{mmLightSteelBlue}{rgb}{.5, .77, .87}
 
 \selectcolormodel{cmyk}
 
-\setbeamercolor{headline}{fg=tabutter,bg=ta3skyblue}
-\setbeamercolor{footline}{fg=tabutter, bg=ta3skyblue}
+\setbeamercolor{headline}{fg=tabutter,bg=mm3skyblue}
+\setbeamercolor{footline}{fg=tabutter, bg=mm3skyblue}
 \setbeamerfont{footline}{size=\large}
 \setbeamercolor{separation line}{bg=ta2orange}
 \setbeamercolor{title in headline}{fg=taorange}
 \setbeamercolor{author in headline}{fg=ta2orange}
-\setbeamercolor{institute in headline}{fg=ta2orange}
+\setbeamercolor{institute in headline}{fg=ta3orange}
 
 \setbeamercolor{framesubtitle}{fg=ta3orange, bg=ta2gray}
-\setbeamercolor{author in head/foot}{fg=taorange, bg=ta3skyblue}
+\setbeamercolor{author in head/foot}{fg=taorange, bg=mm3skyblue}
 \setbeamercolor{title in head/foot}{fg=ta2orange, bg=black}
 
-\setbeamercolor*{normal text}{fg=tachameleon, bg=LightSteelBlue}
+\setbeamercolor*{normal text}{fg=white, bg=mmLightSteelBlue}
 \setbeamercolor*{block body}{bg=white,fg=black}
-\setbeamercolor*{block title}{fg=taorange,bg=ta3skyblue}
+\setbeamercolor*{block title}{fg=taorange,bg=mm3skyblue}
 \setbeamerfont{block title}{size=\large,series=\bf}
 \setbeamercolor{upper separation line head}{fg=ta2orange}
 
-\setbeamercolor*{example body}{fg=ta3aluminium,bg=black}
-\setbeamercolor*{example text}{fg=ta3aluminium,bg=black}
+\setbeamercolor*{example body}{fg=lightgray,bg=black}
+\setbeamercolor*{example text}{fg=lightgray,bg=black}
 \setbeamercolor*{example title}{bg=taorange,fg=ta2gray}
 
 \setbeamercolor{alerted text}{fg=ta3orange}
 
 %\setbeamercolor{example text}{fg=taorange}
-\setbeamercolor{structure}{fg=ta2skyblue}
+\setbeamercolor{structure}{fg=mm2skyblue}
 
 % adapt height of imtemize rectangles
 \setbeamertemplate{itemize items}[circle]
@@ -154,9 +157,9 @@
     \vskip0.9ex
   \end{beamercolorbox}
   \vskip0pt%
-  \begin{beamercolorbox}[wd=\paperwidth]{lower separation line foot}
-    \rule{0pt}{3pt}
-  \end{beamercolorbox}
+  % \begin{beamercolorbox}[wd=\paperwidth]{lower separation line foot}
+  %   \rule{0pt}{3pt}
+  % \end{beamercolorbox}
 }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -185,14 +188,8 @@
 \newcommand{\advice}{\includegraphics[height=0.8em]{figures/light-bulb}}
 \newcommand{\warning}{\includegraphics[height=0.6em]{figures/Warning-icon}}
 
-% Number of the block.  Definition adated from ball style for enumerate items in
-% beamerbaseauxtemplates.sty.
-\newcommand{\blocknumber}[1]{\begin{pgfpicture}{-1ex}{-0.65ex}{1ex}{1ex}
-    \usebeamercolor[fg]{item projected}
-    {\pgftransformscale{2.5}\pgftext{\normalsize\pgfuseshading{bigsphere}}}
-    {\pgftransformshift{\pgfpoint{0pt}{0.5pt}}
-      \pgftext{\usebeamercolor[fg]{block title}#1}}
-  \end{pgfpicture}}
+\newcommand{\planeticon}[1]%
+{\(\vcenter{\hbox{\includegraphics[height=1em]{figures/#1}}}\)}
 
 \title{Estimating orbital period of exoplanets \\
   in microlensing events}
@@ -210,7 +207,7 @@
     %%% Left column
     \begin{column}{0.48\columnwidth}
       \begin{minipage}[T]{\columnwidth}
-        \begin{block}{Gravitational lensing\hfill \blocknumber{1}}
+        \begin{block}{Gravitational lensing\hfill \planeticon{mercury}}
           A \alert{gravitational lens} is a distribution of matter whose
           gravitational pull distorts space-time, bends light rays and
           \alert{amplifies} the luminosity of a source star coming to an
@@ -223,7 +220,7 @@
           \end{figure}
         \end{block}
         
-        \begin{block}{Binary Lens with Orbital Motion\hfill \blocknumber{3}}
+        \begin{block}{Binary Lens with Orbital Motion\hfill \planeticon{earth}}
           Usually, in microlensing events static binary systems are taken into
           account, but binary systems do rotate
 
@@ -248,7 +245,7 @@
           \alert{independently}?
         \end{block}
 
-        \begin{block}{Fit to Real Data\hfill \blocknumber{5}}
+        \begin{block}{Fit to Real Data\hfill \planeticon{jupiter}}
           \begin{figure}
             \centering
             \includegraphics[width=0.7\textwidth]{figures/ogle322all}
@@ -257,7 +254,7 @@
           \end{figure}
         \end{block}
 
-        \begin{block}{Conclusions\hfill \blocknumber{6}}
+        \begin{block}{Conclusions\hfill \planeticon{saturn}}
           \begin{itemize}
           \item[\advice] Orbital period of the lenses should be \alert{shorter}
             than the Einstein time or we must have \alert{long observational
@@ -281,7 +278,7 @@
     \begin{column}{0.48\textwidth}
       \begin{minipage}[T]{\columnwidth}
         \begin{block}{Detecting Exoplanets with Microlensing\hfill
-            \blocknumber{2}}
+            \planeticon{venus}}
           \alert{Microlensing} is a powerful tool to detect exoplanets: a binary
           system (lensing star with a companion planet) induces non-negligible
           deviations to the usual symmetric \alert{Paczyński light curve}
@@ -296,7 +293,7 @@
         \end{block}
 
         \begin{block}{Simulation: Amplification Curve and Periodogram\hfill
-            \blocknumber{4}}
+            \planeticon{mars}}
           \begin{figure}
             \centering
             \includegraphics[width=0.775\columnwidth]{figures/figure2}\\[1.8ex]
@@ -308,7 +305,7 @@
           \end{figure}
         \end{block}
 
-        \begin{block}{Reference\hfill \blocknumber{7}}
+        \begin{block}{Reference\hfill \planeticon{uranus}}
           \begin{itemize}
           \item[{\includegraphics[scale=2]{figures/beamericonarticle-crop.pdf}}]
             A. A. Nucita, M. Giordano, F. De Paolis, and
