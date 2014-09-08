@@ -35,13 +35,12 @@
 % orange
 \definecolor{taorange}{rgb}{0.98824, 0.68627, 0.24314}		% #fcaf3e
 \definecolor{ta2orange}{rgb}{0.96078, 0.47451, 0}		% #f57900
-\definecolor{ta3orange}{rgb}{0.80784, 0.36078, 0}		% #ce5c00
 
 % Custom colors
-% sky blue
-\definecolor{mmskyblue}{rgb}{0.34706, 0.56078, 0.81176}		% #728fcf
-\definecolor{mm2skyblue}{rgb}{0.10392, 0.39608, 0.64314}	% #3465a4
-\definecolor{mm3skyblue}{rgb}{0.02549, 0.29020, 0.52941}	% #204a87
+\definecolor{mm3orange}{rgb}{0.90784, 0.36078, 0}
+\definecolor{mmskyblue}{rgb}{0.34706, 0.56078, 0.81176}
+\definecolor{mm2skyblue}{rgb}{0.10392, 0.39608, 0.64314}
+\definecolor{mm3skyblue}{rgb}{0.02549, 0.29020, 0.52941}
 \definecolor{mmLightSteelBlue}{rgb}{.5, .77, .87}
 
 \selectcolormodel{cmyk}
@@ -50,17 +49,17 @@
 \setbeamercolor{footline}{fg=tabutter, bg=mm3skyblue}
 \setbeamerfont{footline}{size=\large}
 \setbeamercolor{separation line}{bg=ta2orange}
-\setbeamercolor{title in headline}{fg=taorange}
-\setbeamercolor{author in headline}{fg=ta2orange}
-\setbeamercolor{institute in headline}{fg=ta3orange}
+\setbeamercolor{title in headline}{fg=white}
+\setbeamercolor{author in headline}{fg=white}
+\setbeamercolor{institute in headline}{fg=white}
 
-\setbeamercolor{framesubtitle}{fg=ta3orange, bg=ta2gray}
-\setbeamercolor{author in head/foot}{fg=taorange, bg=mm3skyblue}
-\setbeamercolor{title in head/foot}{fg=ta2orange, bg=black}
+\setbeamercolor{framesubtitle}{fg=white, bg=ta2gray}
+\setbeamercolor{author in head/foot}{fg=white, bg=mm3skyblue}
+\setbeamercolor{title in head/foot}{fg=white, bg=black}
 
 \setbeamercolor*{normal text}{fg=white, bg=mmLightSteelBlue}
 \setbeamercolor*{block body}{bg=white,fg=black}
-\setbeamercolor*{block title}{fg=taorange,bg=mm3skyblue}
+\setbeamercolor*{block title}{fg=white,bg=mm3skyblue}
 \setbeamerfont{block title}{size=\large,series=\bf}
 \setbeamercolor{upper separation line head}{fg=ta2orange}
 
@@ -68,9 +67,7 @@
 \setbeamercolor*{example text}{fg=lightgray,bg=black}
 \setbeamercolor*{example title}{bg=taorange,fg=ta2gray}
 
-\setbeamercolor{alerted text}{fg=ta3orange}
-
-%\setbeamercolor{example text}{fg=taorange}
+\setbeamercolor{alerted text}{fg=mm3orange}
 \setbeamercolor{structure}{fg=mm2skyblue}
 
 % adapt height of imtemize rectangles
@@ -309,7 +306,7 @@
         \vspace{1.7ex}
         \begin{block}{Reference\hfill \planeticon{uranus}}
           \begin{itemize}
-          \item[{\includegraphics[scale=2]{figures/beamericonarticle-crop.pdf}}]
+          \item[{\includegraphics[height=0.72em]{figures/beamericonarticle-crop.pdf}}]
             A. A. Nucita, M. Giordano, F. De Paolis, and
             G. Ingrosso. ``\emph{Signatures of rotating binaries in microlensing
               experiments}''. In: \emph{Monthly Notices of the Royal
