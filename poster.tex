@@ -26,25 +26,38 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-% Colors
+%% Colors
 \RequirePackage{tangocolors}
+
+% orange
+\definecolor{taorange}{rgb}{0.98824, 0.68627, 0.24314}		% #fcaf3e
+\definecolor{ta2orange}{rgb}{0.96078, 0.47451, 0}		% #f57900
+\definecolor{ta3orange}{rgb}{0.80784, 0.36078, 0}		% #ce5c00
+
+% sky blue
+\definecolor{taskyblue}{rgb}{0.34706, 0.56078, 0.81176}		% #728fcf
+\definecolor{ta2skyblue}{rgb}{0.10392, 0.39608, 0.64314}	% #3465a4
+\definecolor{ta3skyblue}{rgb}{0.02549, 0.29020, 0.52941}	% #204a87
+
+\definecolor{LightSteelBlue}{rgb}{.5, .77, .87}
+
 \selectcolormodel{cmyk}
 
-\setbeamercolor{headline}{fg=tabutter,bg=black}
-\setbeamercolor{footline}{fg=tabutter, bg=ta3gray}
+\setbeamercolor{headline}{fg=tabutter,bg=ta3skyblue}
+\setbeamercolor{footline}{fg=tabutter, bg=ta3skyblue}
 \setbeamerfont{footline}{size=\large}
 \setbeamercolor{separation line}{bg=ta2orange}
-\setbeamercolor{title in headline}{fg=tabutter}
+\setbeamercolor{title in headline}{fg=taorange}
 \setbeamercolor{author in headline}{fg=ta2orange}
-\setbeamercolor{institute in headline}{fg=ta3orange}
+\setbeamercolor{institute in headline}{fg=ta2orange}
 
 \setbeamercolor{framesubtitle}{fg=ta3orange, bg=ta2gray}
-\setbeamercolor{author in head/foot}{fg=ta2orange, bg=black}
+\setbeamercolor{author in head/foot}{fg=taorange, bg=ta3skyblue}
 \setbeamercolor{title in head/foot}{fg=ta2orange, bg=black}
 
-\setbeamercolor*{normal text}{fg=tachameleon, bg=ta3gray}
-\setbeamercolor*{block body}{bg=ta3aluminium,fg=black}
-\setbeamercolor*{block title}{fg=taorange,bg=ta2gray}
+\setbeamercolor*{normal text}{fg=tachameleon, bg=LightSteelBlue}
+\setbeamercolor*{block body}{bg=white,fg=black}
+\setbeamercolor*{block title}{fg=taorange,bg=ta3skyblue}
 \setbeamerfont{block title}{size=\large,series=\bf}
 \setbeamercolor{upper separation line head}{fg=ta2orange}
 
@@ -52,13 +65,13 @@
 \setbeamercolor*{example text}{fg=ta3aluminium,bg=black}
 \setbeamercolor*{example title}{bg=taorange,fg=ta2gray}
 
-\setbeamercolor{alerted text}{fg=ta3gray}
+\setbeamercolor{alerted text}{fg=ta3orange}
 
 %\setbeamercolor{example text}{fg=taorange}
-\setbeamercolor{structure}{fg=ta3gray}
+\setbeamercolor{structure}{fg=ta2skyblue}
 
 % adapt height of imtemize rectangles
-\setbeamertemplate{itemize items}[ball]
+\setbeamertemplate{itemize items}[circle]
 % \setbeamertemplate{itemize item}{\raisebox{0.12ex}{$\blacktriangleright$}\hskip.1em}
 % \setbeamertemplate{itemize subitem}{\raisebox{0.12ex}{$\triangleright$}\hskip.1em}
 % or define your own template using \defbeamertemplate{itemize item}, see beameruserguide.pdf
@@ -101,9 +114,9 @@
         \vskip4ex
         \begin{center}
           \usebeamercolor{title in
-            headline}{\color{fg}\textbf{\Huge{\inserttitle}}\\[1ex]}
+            headline}{\color{fg}\textbf{\Huge{\inserttitle}}\\[1.1ex]}
           \usebeamercolor{author in
-            headline}{\color{fg}\Large{\insertauthor}\\[1ex]}
+            headline}{\color{fg}\Large{\insertauthor}\\[1.2ex]}
           \usebeamercolor{institute in
             headline}{\color{fg}\large{\insertinstitute}\\[1ex]}
         \end{center}
@@ -187,7 +200,7 @@
     \textsc{Francesco De Paolis}, \textsc{Gabriele Ingrosso}}{Mosè Giordano,
     Achille A. Nucita, Francesco De Paolis, Gabriele Ingrosso}}
 \institute[University of Salento and INFN Lecce]{Department of Mathematics and
-  Physics ``\emph{E. De Giorgi}'', University of Salento, Lecce, Italy \\
+  Physics ``\emph{E. De Giorgi}'', University of Salento, Lecce, Italy \\[0.8ex]
   INFN, Section of Lecce, Italy}
 \date{24 September--2 October 2014}
 
