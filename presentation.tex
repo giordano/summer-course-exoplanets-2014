@@ -2,7 +2,6 @@
 \usetheme{Madrid}
 \setbeamercovered{dynamic}
 \setbeamertemplate{navigation symbols}{}
-%\setbeamercolor{structure}{fg=darkred}
 
 \usepackage[T1]{fontenc}
 \usefonttheme{professionalfonts}
@@ -13,7 +12,6 @@
 \usepackage{graphicx,siunitx}
 \usepackage[font=scriptsize,labelformat=empty]{caption}
 
-\definecolor{darkblue}{rgb}{0,0,0.8}
 \DeclareSIUnit\parsec{pc}
 \DeclareSIUnit\clight{\text{\ensuremath{c}}}
 \sisetup{per-mode=symbol,
@@ -40,9 +38,13 @@
 events]{Estimating orbital period of exoplanets \\ in microlensing events}
 
 \author{Mosè Giordano}
-\date{24 September, 2014}
+\date{24 September--2 October, 2014}
 \institute[UniSalento and INFN Lecce]{Università del Salento and INFN Lecce}
 \titlegraphic{\includegraphics[width=20mm]{figures/logo-unisalento}}
+
+% Customise the caption: do not insert the caption name, nor the number, just
+% insert a smaller caption text.
+\setbeamertemplate{caption}{\scriptsize\insertcaption}
 
 %% Personalizzo modello prima pagina
 \setbeamercolor*{institute}{parent=palette primary}
@@ -117,8 +119,6 @@ events]{Estimating orbital period of exoplanets \\ in microlensing events}
 \definecolor{mm2skyblue}{rgb}{0.10392, 0.39608, 0.64314}
 \definecolor{mm3skyblue}{rgb}{0.02549, 0.29020, 0.52941}
 \definecolor{mmLightSteelBlue}{rgb}{.5, .77, .87}
-
-\selectcolormodel{cmyk}
 
 \setbeamercolor{normal text}{fg=black,bg=white}
 \setbeamercolor{alerted text}{fg=mm3orange}
