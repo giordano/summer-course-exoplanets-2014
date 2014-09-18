@@ -1,6 +1,8 @@
 auto/*
 *.aux
+*.bbl
 *.bcf
+*.blg
 *.log
 *.nav
 *.out
@@ -10,3 +12,4 @@ auto/*
 *.toc
 *.sty
 poster.pdf
+presentation.pdf
